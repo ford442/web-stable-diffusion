@@ -16,7 +16,7 @@ if [[ -z ${TVM_HOME_SET} ]]; then
     export TVM_HOME="${TVM_HOME:-3rdparty/tvm}"
 fi
 
-export TOKENZIER_WASM_HOME="3rdparty/tokenizers-wasm"
+export TOKENZIER_WASM_HOME="/content/RAMDRIVE2/web-stable-diffusion/3rdparty/tokenizers-wasm"
 
 mkdir -p dist
 cd ${TVM_HOME}/web && make && npm install && npm run bundle && cd -
