@@ -24,6 +24,6 @@ git submodule update --init
 cd ${TOKENZIER_WASM_HOME} && wasm-pack build --target web && cd -
 rm -rf dist/tokenizers-wasm
 cp -r ${TOKENZIER_WASM_HOME}/pkg dist/tokenizers-wasm
-
+cd -
 echo "Exporting tvmjs runtime dist files"
 python -c "from tvm.contrib import tvmjs; tvmjs.export_runtime(\"dist\")"
